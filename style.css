@@ -1,0 +1,334 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.logo img {
+  width: 17%;
+  margin: 1rem 0 0 1rem;
+}
+
+.navbarTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navLinks {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+.navLinks li a {
+  text-decoration: none;
+  color: white;
+  padding: 1.8rem;
+  font-weight: 300;
+  font-size: .7em;
+  letter-spacing: 1px;
+}
+
+.navLinksBottom li a {
+  color: #ffffff;
+}
+
+
+
+.navLinks li {
+  position: relative; /* add this line */
+  margin-right: 20px;
+}
+
+
+.subLink {
+    padding:4px;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 100%;
+    display: none;
+    transition: opacity 0.3s;
+    border-radius: 10px;
+    background-color: #333;
+    border: 1px solid #555;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+
+ 
+ .anumana li{
+  position: relative;
+  right: 20%;
+ }
+
+ .anumana{
+  width: 120%;
+ }
+ 
+  .subLink li a {
+    font-size: .7rem;
+    font-weight: lighter;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+  }
+
+ 
+  .navLinks li:hover .subLink {
+    list-style: none;
+    display: block;
+    opacity: 1;
+  }
+  
+  .navLinks li:hover > a {
+    color: #ccc;
+  }
+
+
+ 
+  
+  
+ 
+  .navLinksBottom {
+    position: fixed;
+    bottom: 20px;
+    left: 50%; 
+    transform: translateX(-50%);
+    width: auto; 
+    background-color: #333;
+    border: 1px solid #555;
+    padding: 10px;
+    text-align: center;
+    border-radius: 7px;
+    display: flex; 
+    justify-content: center; 
+  }
+  
+  .navLinksBottom li {
+    margin-right: 20px;
+    list-style: none; 
+    display: flex; 
+  }
+  
+  .navLinksBottom li a {
+    font-size: .9em;
+    letter-spacing: 1px;
+    font-weight: 100;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .navLinksBottom li a:hover {
+    color: #ccc;
+  }
+
+
+
+
+  .headerText h1 {
+    margin: 100px 30px;
+    letter-spacing: 2px;
+    transform: scale(0.5);
+    animation: zoomIn 1.5s ease-out forwards;
+  }
+  
+  @keyframes zoomIn {
+    0% {
+      transform: scale(0.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .anumanaShop{
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  .anumanaimg img{
+    width: 50%;
+    position: relative;
+    top: 20%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    transition: box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  .anumanaimg{
+    position: relative;
+  }
+
+  .anumanaimg .quick-view {
+    position: absolute;
+    bottom: 12%;
+    left: 0;
+    width: 50%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(100%);
+    border-radius: 0 0 4px 4px;
+  }
+  
+  .anumanaimg img:hover + .quick-view {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease-in-out, transform .3s ease-in-out;
+  }
+
+
+  p{
+    position: relative;
+    top: 20%;
+   font-size: .8rem;
+   font-weight: 100;
+  }
+
+  h4{
+    font-size: 1.2rem;
+   font-weight: lighter;
+   position: relative;
+   bottom: 27%;
+   left: 7%;
+  }
+
+  h4 a{
+    text-decoration: none;
+    color: #fff;
+  }
+
+  h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 65%;
+    height: 3px;
+    background-color: #dddddd;
+    
+  }
+
+  .imagesSection {
+    overflow-x: scroll;
+    white-space: nowrap;
+    padding: 20px;
+}
+
+.images {
+    display: flex;
+}
+
+.images img {
+    width: 33.33%; /* Each image takes up one third of the container */
+    height: auto;
+    display: inline-block;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .images img {
+        width: 100%; /* Each image takes up the full width on smaller screens */
+    }
+}
+
+
+  @media (max-width: 992px) {
+
+   
+    .navLinksBottom{
+      width: 60%;
+    }
+
+   .navLinksBottom li a{
+    font-size: .7rem;
+   }
+  }
+
+  @media (max-width: 457px) {
+
+   
+
+    .logo img{
+      width: 40%;
+    }
+
+    .subLink{
+      width: 50%;
+    }
+    /* .navLinks li {
+      position: relative;
+      top: 4rem;
+    } */
+
+    .anumanaShop{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .headerText h1{
+      font-size: 3rem;
+    }
+
+    h4{
+      position: relative;
+      bottom: 5rem;
+    }
+
+    h4::before{
+      content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 75%;
+    height: 3px;
+      top: 1.5rem;
+    }
+
+    .anumanaimg {
+      margin: -2rem 3rem;
+    }
+
+    .imagesSection .images{
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .images img{
+      width: 100%;
+    }
+
+    .subLink{
+      border-radius: 10px;
+      background-color: #000;
+      border: 1px solid #000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+    }
+    
+    .navLinksBottom{
+      width: 80%;
+
+    }
+
+    .navLinksBottom li a{
+      font-size: .6rem;
+    }
+  
