@@ -260,57 +260,25 @@ p{
 /* --------collections---------- */
 
 
-
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-
-
 .collections {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns */
-    gap: 20px;
-    padding: 20px;
-    z-index: 2;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-column-gap: 20px;
+    padding:0  290px;
 }
 
 .collection {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.collection:nth-child(1), .collection:nth-child(2) {
-    grid-row: 1;
-}
 
-.collection:nth-child(3) {
-    grid-row: 1;
-    grid-column: 3;
-}
 
-.collection:nth-child(4) {
-    grid-row: 2;
-    grid-column: 1;
-    position: relative;
-    bottom: 220px;
-}
-
-.collection:nth-child(5) {
-    grid-row: 2;
-    position: relative;
-    bottom: 140px;
-}
 
 .collection h2 {
     margin: 10px 0;
-    font-size: 1.4rem;
-    font-weight: lighter;
-    letter-spacing: 1px;
 }
 
 .image-container {
@@ -321,9 +289,11 @@ body {
 
 .image-container img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 35vh;
+    object-fit: cover;
+    padding: 10px;
 }
+
 
 .overlay {
     position: absolute;
@@ -353,36 +323,15 @@ body {
     text-align: center;
 }
 
-@media (max-width: 1024px) {
-    .collections {
-        grid-template-columns: repeat(2, 1fr); /* Two columns for smaller screens */
-    }
-}
 
-@media (max-width: 768px) {
-    .collections {
-        grid-template-columns: 1fr; /* One column for mobile screens */
+@media (min-width: 481px) and (max-width: 768px) {
+    .collections{
+        padding:0 200px;
     }
-    
-    .collection {
-        margin-bottom: 20px; /* Space between rows on mobile */
-    }
-}
+  }
 
-@media (max-width: 480px) {
-    .collections {
-        grid-template-columns: 1fr; /* Single column for very small screens */
+  @media (max-width: 480px) {
+    .collections{
+        padding:0 100px;
     }
-}
-
-@media (max-width: 1024px) {
-    .collections {
-        grid-template-columns: repeat(2, 1fr); /* Two columns for smaller screens */
-    }
-}
-
-@media (max-width: 768px) {
-    .collections {
-        grid-template-columns: 1fr; /* One column for mobile screens */
-    }
-}
+  }
