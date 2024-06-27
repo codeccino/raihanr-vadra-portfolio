@@ -1,337 +1,302 @@
-/* General reset and styling */
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #000; /* Black background */
-    color: #fff; /* White text color */
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #000;
+  color: #fff;
 }
 
-/* Navbar styling */
 .navbar {
-    position: fixed;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
+  position: fixed;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
 }
 
 .logo img {
-    max-width: 15%; /* Ensure logo is responsive */
-    height: auto; /* Maintain aspect ratio */
+  max-width: 15%;
+  height: auto;
 }
 
 .menu-icon {
-    display: none; /* Hide menu icon by default */
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
+  display: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 #menu-toggle {
-    display: none;
+  display: none;
 }
 
 .nav-links {
-    list-style-type: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    gap: 20px;
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
 }
 
 .nav-item {
-    position: relative;
+  position: relative;
 }
 
 .nav-link {
-    font-size: 14px; /* Small font size */
-    font-weight: 300; /* Lighter font weight */
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px; /* Adjust padding as needed */
-    display: block;
-    position: relative;
-    transition: color 0.3s ease;
+  font-size: 14px;
+  font-weight: 300;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
 .nav-link i {
-    margin-left: 5px;
-    transition: transform 0.3s ease;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #ddd; /* Lighter color on hover */
+  color: #ddd;
 }
 
 .nav-link:hover i {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
-
-
-/* Sublinks styling */
-/* Sublinks styling */
 .sublinks {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    list-style-type: none;
-    padding: 4px 0; /* Reduced padding */
-    margin: 0;
-    width: 160px; /* Adjust width as needed */
-    border-radius: 8px;
-    background-color: rgba(0, 0, 0, 0.8); /* Transparent black background */
-    backdrop-filter: blur(5px); /* Blur effect for glass-like appearance */
-    border: 1px solid #555;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style-type: none;
+  padding: 4px 0;
+  margin: 0;
+  width: 160px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  border: 1px solid #555;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .sublinks li {
-    padding: 3px 0; /* Adjust padding as needed */
+  padding: 3px 0;
 }
 
 .sublinks a {
-    font-size: 12px; /* Small font size */
-    color: white;
-    padding: 8px 15px; /* Adjust padding as needed */
-    display: block;
-    text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transition for background and color */
+  font-size: 12px;
+  color: white;
+  padding: 8px 15px;
+  display: block;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .sublinks a:hover {
-    background-color: rgba(85, 85, 85, 0.8); /* Transparent glass-like background color on hover */
-    color: #fff; /* White text color on hover */
-}
-
-
-.sublinks li {
-    padding: 3px 0; /* Adjust padding as needed */
-}
-
-.sublinks a {
-    font-size: 12px; /* Small font size */
-    color: white;
-    padding: 8px 15px; /* Adjust padding as needed */
-    display: block;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+  background-color: rgba(85, 85, 85, 0.8);
+  color: #fff;
 }
 
 .sublinks a:hover {
-    background-color: #555; /* Darker background color on hover */
+  background-color: #555;
 }
 
 .nav-item:hover .sublinks {
-    display: block;
+  display: block;
 }
 
-/* Media query for responsive design */
 @media (max-width: 768px) {
-
-    .logo img{
-        margin: 0 auto;
+  .logo img {
+    margin: 0 auto;
     display: block;
-    }
+  }
 
-    .menu-icon {
-        display: block;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.8); /* Transparent black background */
-        backdrop-filter: blur(5px);
-        display: none;
-    }
-
-    .nav-links.show {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .nav-item {
-        width: 100%;
-        text-align: center;
-    }
-
-
-    .nav-item:hover .sublinks {
-        display: block;
-        position: relative;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
-      }
-
-    .nav-link {
-        padding: 15px;
-    }
-
-    /* Existing styles */
-
-.menu-icon i:first-child {
+  .menu-icon {
     display: block;
-}
+  }
 
-.menu-icon i:last-child {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
     display: none;
-}
+  }
 
-.menu-icon.open i:first-child {
-    display: none;
-}
+  .nav-links.show {
+    display: flex;
+    flex-direction: column;
+  }
 
-.menu-icon.open i:last-child {
+  .nav-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-item:hover .sublinks {
     display: block;
-}
+    position: relative;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
 
-}
+  .nav-link {
+    padding: 15px;
+  }
 
+  .menu-icon i:first-child {
+    display: block;
+  }
+
+  .menu-icon i:last-child {
+    display: none;
+  }
+
+  .menu-icon.open i:first-child {
+    display: none;
+  }
+
+  .menu-icon.open i:last-child {
+    display: block;
+  }
+}
 
 .imagesSection {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* Adjusted to start */
-    overflow: hidden; /* Prevent overflow */
-    position: relative; /* Make it a containing block */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
 }
-
 
 .collectionTitle {
-    text-align: center;
-    display: block;
+  text-align: center;
+  display: block;
 }
 
-h1{
-    font-size: 2rem;
-    font-weight: 100;
-    letter-spacing: 2px;
+h1 {
+  font-size: 2rem;
+  font-weight: 100;
+  letter-spacing: 2px;
 }
 
-p{
-    font-size: .7rem;
-    font-weight: 100;
-    letter-spacing: 2px;
-    position: relative;
-    bottom: 30px;
+p {
+  font-size: 0.7rem;
+  font-weight: 100;
+  letter-spacing: 2px;
+  position: relative;
+  bottom: 30px;
 }
-
 
 .images {
-    display: flex;
-    gap: 10px;
-    position: absolute; /* Prevent vertical movement */
-    top: 50%; /* Center vertically */
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  top: 50%;
 }
 
 .images img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    transition: transform 0.3s ease; /* Transition for smooth scaling */
-    cursor: zoom-in; /* Cursor changes to zoom-in */
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
 }
 
 .images img.zoom {
-    transform: scale(1.5); /* Scale up the image on hover */
-    z-index: 1000; /* Ensure the hovered image is on top */
+  transform: scale(1.5);
+  z-index: 1000;
 }
 
 .images img.expanded {
-    position: fixed;
-    left: 50%;
-    top: 50%; /* Center vertically when expanded */
-    transform: translate(-50%, -50%) scale(2); /* Center and scale up the image */
-    z-index: 1000; /* Ensure it's on top of other content */
-    cursor: zoom-out; /* Change cursor to zoom-out */
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(2);
+  z-index: 1000;
+  cursor: zoom-out;
 }
 
-
-/* --------collections---------- */
-
-
 .collections {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-column-gap: 20px;
-    padding:0  290px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-column-gap: 20px;
+  padding: 0 290px;
 }
 
 .collection {
-    display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-
-
-
 .collection h2 {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 .image-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 .image-container img {
-    width: 100%;
-    height: 35vh;
-    object-fit: cover;
-    padding: 10px;
+  width: 100%;
+  height: 35vh;
+  object-fit: cover;
+  padding: 10px;
 }
 
-
 .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .image-container:hover .overlay {
-    opacity: 1;
+  opacity: 1;
 }
 
 .view-button {
-    padding: 10px 20px;
-    border: 2px solid white;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: transparent;
-    text-align: center;
+  padding: 10px 20px;
+  border: 2px solid white;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: transparent;
+  text-align: center;
 }
 
-
 @media (min-width: 481px) and (max-width: 768px) {
-    .collections{
-        padding:0 200px;
-    }
+  .collections {
+    padding: 0 200px;
   }
+}
 
-  @media (max-width: 480px) {
-    .collections{
-        padding:0 100px;
-    }
+@media (max-width: 480px) {
+  .logo img {
+    width: 100vw;
   }
+  .collections {
+    padding: 0 100px;
+  }
+}
